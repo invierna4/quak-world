@@ -6,33 +6,54 @@
 <meta name="description" content="QUAK is an alternative social app to feel connected without talking.">
 <meta name="theme-color" content="#fbfaf6">
 <style>
-:root{--ink:#17201f;--muted:#666967;--paper:#fbfaf6}
-*{box-sizing:border-box}
-html,body{margin:0;background:var(--paper);color:var(--ink);font-family:"Avenir Next",Avenir,system-ui,-apple-system,sans-serif}
-.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:52px 24px}
-.wrap{width:min(1120px,94vw);text-align:center}
-.logo{display:block;width:min(320px,56vw);height:auto;margin:0 auto 56px}
-h1{margin:0 0 20px;font-size:clamp(38px,5.7vw,76px);font-weight:500;letter-spacing:-.045em;line-height:1.08}
-.lede{margin:0 auto;color:var(--muted);font-size:clamp(18px,2.4vw,30px);line-height:1.45;font-weight:400}
-.frog{display:block;width:min(440px,74vw);height:auto;margin:52px auto 0}
-.coming{margin:26px 0 0;color:#777a78;font-size:14px;letter-spacing:.16em}
-@media(max-width:600px){
- .hero{padding:40px 20px}
- .logo{width:min(260px,66vw);margin-bottom:46px}
- h1{font-size:clamp(34px,10vw,50px)}
- .lede{font-size:18px;max-width:520px}
- .frog{width:min(360px,88vw);margin-top:44px}
- .coming{margin-top:22px}
-}
+:root{--paper:#fbfaf6;--ink:#102426;--muted:#696d6d;--green:#82a468}
+*{box-sizing:border-box}html,body{margin:0;background:var(--paper);color:var(--ink)}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.hero{min-height:100svh;display:flex;justify-content:center;padding:56px 28px 46px}
+.page{width:min(1416px,100%);text-align:center}
+.brand{width:285px;height:164px;margin:0 auto 22px;position:relative}
+.wordmark{position:absolute;left:0;right:0;top:31px;font-family:"Arial Rounded MT Bold","Helvetica Rounded",Arial,sans-serif;font-size:69px;font-weight:700;letter-spacing:8px;line-height:1;color:#111}
+.splash{position:absolute;right:-3px;top:0;width:72px;height:66px}
+.splash i{position:absolute;background:var(--green);border-radius:100% 20% 100% 20%;width:15px;height:48px;transform-origin:50% 100%}
+.splash i:nth-child(1){left:6px;top:0;transform:rotate(8deg)}.splash i:nth-child(2){left:31px;top:9px;transform:rotate(42deg)}.splash i:nth-child(3){left:49px;top:36px;transform:rotate(78deg)}
+.wave{position:absolute;left:30px;bottom:4px;width:228px;height:62px}
+.wave:before{content:"";position:absolute;inset:0;border-bottom:14px solid #111;border-radius:0 0 55% 48%;transform:rotate(2deg)}
+h1{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:clamp(56px,6.1vw,91px);font-weight:300;letter-spacing:-.055em;line-height:1.02;margin:0 0 22px}
+.lede{font-size:clamp(24px,2.5vw,38px);font-weight:300;letter-spacing:-.025em;line-height:1.25;color:var(--muted);margin:0 auto 42px}
+.pond{position:relative;width:100%;aspect-ratio:3.03/1;border-radius:34px;overflow:hidden;background:
+radial-gradient(circle at 24% 18%,rgba(255,241,187,.95) 0 3%,rgba(255,226,151,.52) 9%,transparent 26%),
+linear-gradient(180deg,#9da68a 0%,#85917d 31%,#aeb393 47%,#899b7b 49%,#8b9e83 62%,#aeb39a 100%)}
+.pond:before{content:"";position:absolute;inset:0;background:
+radial-gradient(ellipse at 48% 38%,rgba(255,255,255,.18),transparent 25%),
+linear-gradient(175deg,transparent 52%,rgba(246,232,183,.28) 53%,rgba(83,104,76,.15) 60%,rgba(246,232,183,.28) 67%,rgba(77,98,76,.12) 74%,transparent 82%)}
+.bank{position:absolute;left:-4%;right:-4%;top:39%;height:24%;background:linear-gradient(180deg,rgba(74,91,59,.64),rgba(105,119,74,.24));filter:blur(13px);border-radius:50%}
+.lily{position:absolute;background:#617b43;border-radius:55% 45% 54% 46%;filter:drop-shadow(0 3px 2px rgba(0,0,0,.12))}
+.l1{width:19%;height:14%;left:1%;bottom:23%;transform:rotate(7deg)}.l2{width:16%;height:11%;left:14%;bottom:11%;transform:rotate(-8deg)}.l3{width:13%;height:9%;right:5%;bottom:24%;transform:rotate(-7deg)}.l4{width:10%;height:7%;right:22%;bottom:14%;transform:rotate(8deg)}
+.flower{position:absolute;left:5.5%;bottom:25%;width:9%;aspect-ratio:1}
+.flower i{position:absolute;left:39%;top:4%;width:24%;height:68%;background:linear-gradient(#fff9f0,#e9cfc7);border-radius:100% 0 100% 0;transform-origin:50% 90%}
+.flower i:nth-child(1){transform:rotate(-55deg)}.flower i:nth-child(2){transform:rotate(-28deg)}.flower i:nth-child(3){transform:rotate(0)}.flower i:nth-child(4){transform:rotate(28deg)}.flower i:nth-child(5){transform:rotate(55deg)}
+.frog{position:absolute;left:61%;bottom:24%;width:18%;height:27%;background:linear-gradient(180deg,#9dbd72,#8cad63);border-radius:48% 48% 35% 35%;box-shadow:0 5px 9px rgba(38,54,29,.18)}
+.eye{position:absolute;top:-47%;width:47%;aspect-ratio:1;border-radius:50%;background:#f7f5e8;border:7px solid #8eaf67;box-shadow:0 0 0 2px rgba(86,72,32,.4)}
+.eye:before{content:"";position:absolute;inset:13%;background:#171817;border-radius:50%}.eye:after{content:"";position:absolute;width:18%;height:18%;left:23%;top:20%;background:white;border-radius:50%}
+.eye.a{left:-2%}.eye.b{right:-2%}
+.nose{position:absolute;width:3px;height:5px;background:#152014;border-radius:50%;bottom:19%}.n1{left:47%}.n2{left:54%}
+.ring{position:absolute;left:54%;bottom:13%;width:34%;height:38%;border:4px solid rgba(239,230,190,.7);border-left-color:transparent;border-right-color:transparent;border-radius:50%}
+.ring.r2{left:49%;bottom:6%;width:44%;height:51%;opacity:.65}
+.glow{position:absolute;left:18%;top:-10%;width:35%;height:90%;background:radial-gradient(circle,rgba(255,242,185,.42),transparent 67%);filter:blur(18px)}
+.coming{margin:38px 0 0;color:#686d70;font-size:25px;font-weight:300;letter-spacing:.16em}
+@media(max-width:700px){.hero{padding:36px 18px}.brand{transform:scale(.78);margin-bottom:4px}h1{font-size:clamp(42px,11vw,62px)}.lede{font-size:20px;max-width:580px;margin-bottom:34px}.pond{aspect-ratio:1.75/1;border-radius:24px}.frog{width:27%;left:58%;bottom:25%}.flower{width:14%}.coming{font-size:17px;margin-top:28px}}
 </style>
 </head>
-<body>
-<main class="hero"><div class="wrap">
-<img class="logo" src="assets/quak-logo.webp" alt="QUAK">
+<body><main class="hero"><div class="page">
+<div class="brand" aria-label="QUAK"><div class="wordmark">QUAK</div><span class="splash"><i></i><i></i><i></i></span><div class="wave"></div></div>
 <h1>Different ways of being close.</h1>
 <p class="lede">An alternative social app to feel connected without talking.</p>
-<img class="frog" src="assets/quak-frog.webp" alt="" aria-hidden="true">
+<div class="pond" role="img" aria-label="A wide, softly lit pond with lily pads and a wide-eyed frog peeking through rippling water">
+<div class="glow"></div><div class="bank"></div>
+<span class="lily l1"></span><span class="lily l2"></span><span class="lily l3"></span><span class="lily l4"></span>
+<div class="flower"><i></i><i></i><i></i><i></i><i></i></div>
+<div class="ring"></div><div class="ring r2"></div>
+<div class="frog"><span class="eye a"></span><span class="eye b"></span><span class="nose n1"></span><span class="nose n2"></span></div>
+</div>
 <p class="coming">Coming soon.</p>
-</div></main>
-</body>
-</html>
+</div></main></body></html>
