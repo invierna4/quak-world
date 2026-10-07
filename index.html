@@ -6,21 +6,33 @@
 <meta name="description" content="QUAK is an alternative social app to feel connected without talking.">
 <meta name="theme-color" content="#fbfaf6">
 <style>
-:root{--ink:#171918;--green:#789c67;--muted:#68706b;--paper:#fbfaf6;--ripple:#b7cbd5}
-*{box-sizing:border-box}html,body{margin:0;background:var(--paper);color:var(--ink);font-family:"Avenir Next",Avenir,system-ui,-apple-system,sans-serif}
-main{min-height:100vh}.hero{min-height:100svh;display:grid;place-items:center;padding:56px 24px}.wrap{width:min(900px,92vw);text-align:center}
-.brand{width:min(420px,78vw);margin:0 auto 70px}.letters{position:relative;display:inline-block;font-size:clamp(58px,10vw,108px);font-weight:650;letter-spacing:.12em;line-height:.9}
-.marks{position:absolute;left:96%;top:-38%;width:72px;height:64px}.marks i{position:absolute;display:block;width:13px;height:34px;border-radius:50%;background:var(--green)}
-.marks i:nth-child(1){left:3px;top:7px;transform:rotate(5deg)}.marks i:nth-child(2){left:28px;top:18px;transform:rotate(42deg)}.marks i:nth-child(3){left:49px;top:39px;transform:rotate(78deg)}
-.swoop{width:78%;height:44px;margin:18px auto 0;border-bottom:12px solid var(--ink);border-radius:0 0 55% 45%;transform:rotate(2deg)}
-h1{font-size:clamp(32px,4.8vw,56px);font-weight:550;letter-spacing:-.035em;margin:0 0 18px}.lede{font-size:clamp(18px,2.2vw,22px);line-height:1.55;max-width:680px;margin:auto;color:var(--muted)}
-.visual{position:relative;width:190px;height:76px;margin:62px auto 0}.frog{position:absolute;left:59px;top:4px;width:72px;height:44px;background:#9eb780;border-radius:55% 55% 42% 42%}.eye{position:absolute;top:-16px;width:31px;height:31px;background:#fff;border:5px solid #9eb780;border-radius:50%}.eye:after{content:"";position:absolute;width:15px;height:15px;background:#171918;border-radius:50%;left:3px;top:4px}.eye.l{left:5px}.eye.r{right:5px}.ripple{position:absolute;left:14px;bottom:2px;width:162px;height:40px;border-bottom:4px solid var(--ripple);border-radius:50%}.ripple:after{content:"";position:absolute;left:28px;bottom:7px;width:106px;height:25px;border-bottom:4px solid var(--ripple);border-radius:50%}
-@media(max-width:520px){.brand{margin-bottom:56px}.marks{transform:scale(.8);transform-origin:left bottom}.swoop{border-bottom-width:9px}.visual{margin-top:52px}}
+:root{--ink:#17201f;--muted:#666967;--paper:#fbfaf6}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:"Avenir Next",Avenir,system-ui,-apple-system,sans-serif}
+.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:52px 24px}
+.wrap{width:min(1120px,94vw);text-align:center}
+.logo{display:block;width:min(320px,56vw);height:auto;margin:0 auto 56px}
+h1{margin:0 0 20px;font-size:clamp(38px,5.7vw,76px);font-weight:500;letter-spacing:-.045em;line-height:1.08}
+.lede{margin:0 auto;color:var(--muted);font-size:clamp(18px,2.4vw,30px);line-height:1.45;font-weight:400}
+.frog{display:block;width:min(440px,74vw);height:auto;margin:52px auto 0}
+.coming{margin:26px 0 0;color:#777a78;font-size:14px;letter-spacing:.16em}
+@media(max-width:600px){
+ .hero{padding:40px 20px}
+ .logo{width:min(260px,66vw);margin-bottom:46px}
+ h1{font-size:clamp(34px,10vw,50px)}
+ .lede{font-size:18px;max-width:520px}
+ .frog{width:min(360px,88vw);margin-top:44px}
+ .coming{margin-top:22px}
+}
 </style>
 </head>
-<body><main><section class="hero"><div class="wrap">
-<div class="brand" aria-label="QUAK"><div class="letters">QUAK<span class="marks"><i></i><i></i><i></i></span></div><div class="swoop"></div></div>
+<body>
+<main class="hero"><div class="wrap">
+<img class="logo" src="assets/quak-logo.webp" alt="QUAK">
 <h1>Different ways of being close.</h1>
 <p class="lede">An alternative social app to feel connected without talking.</p>
-<div class="visual" aria-hidden="true"><div class="frog"><span class="eye l"></span><span class="eye r"></span></div><div class="ripple"></div></div>
-</div></section></main></body></html>
+<img class="frog" src="assets/quak-frog.webp" alt="" aria-hidden="true">
+<p class="coming">Coming soon.</p>
+</div></main>
+</body>
+</html>
